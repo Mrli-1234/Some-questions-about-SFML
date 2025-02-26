@@ -1,0 +1,54 @@
+After I finished configuring SFML and started building, it reported the following errors:
+====================[ 构建 | Demo | Debug-MinGW ]=================================
+"D:\CLion 2024.3.3\bin\cmake\win\x64\bin\cmake.exe" --build D:\Demo\cmake-build-debug-mingw --target Demo -j 10
+[1/1] Linking CXX executable Demo.exe
+FAILED: Demo.exe 
+C:\Windows\system32\cmd.exe /C "cd . && D:\sfml\mingw64\bin\c++.exe -g  CMakeFiles/Demo.dir/main.cpp.obj -o Demo.exe -Wl,--out-implib,libDemo.dll.a -Wl,--major-image-version,0,--minor-image-version,0  D:/sfml/SFML-3.0.0/lib/sfml-graphics-d.lib  D:/sfml/SFML-3.0.0/lib/sfml-window-d.lib  D:/sfml/SFML-3.0.0/lib/sfml-audio-d.lib  D:/sfml/SFML-3.0.0/lib/sfml-network-d.lib  D:/sfml/SFML-3.0.0/lib/sfml-system-d.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `main':
+D:/Demo/main.cpp:8:(.text+0x91): undefined reference to `__imp__ZN2sf6StringC1EPKcRKSt6locale'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:8:(.text+0xcb): undefined reference to `__imp__ZN2sf9VideoModeC1ENS_7Vector2IjEEj'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:8:(.text+0x117): undefined reference to `__imp__ZN2sf12RenderWindowC1ENS_9VideoModeERKNS_6StringEjNS_5StateERKNS_15ContextSettingsE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:11:(.text+0x171): undefined reference to `__imp__ZN2sf7TextureC1ERKNSt10filesystem7__cxx114pathEb'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:12:(.text+0x19a): undefined reference to `__imp__ZN2sf6SpriteC1ERKNS_7TextureE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:15:(.text+0x1d0): undefined reference to `__imp__ZN2sf4FontC1ERKNSt10filesystem7__cxx114pathE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:16:(.text+0x212): undefined reference to `__imp__ZN2sf6StringC1EPKcRKSt6locale'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:16:(.text+0x239): undefined reference to `__imp__ZN2sf4TextC1ERKNS_4FontENS_6StringEj'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:19:(.text+0x28a): undefined reference to `__imp__ZN2sf5MusicC1ERKNSt10filesystem7__cxx114pathE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:22:(.text+0x2a9): undefined reference to `__imp__ZN2sf11SoundStream4playEv'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:28:(.text+0x2c5): undefined reference to `__imp__ZN2sf10WindowBase9pollEventEv'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:32:(.text+0x303): undefined reference to `__imp__ZN2sf6Window5closeEv'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:36:(.text+0x32e): undefined reference to `__imp__ZN2sf12RenderTarget5clearENS_5ColorE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:39:(.text+0x337): undefined reference to `__imp__ZN2sf12RenderStates7DefaultE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:39:(.text+0x353): undefined reference to `__imp__ZN2sf12RenderTarget4drawERKNS_8DrawableERKNS_12RenderStatesE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:42:(.text+0x35c): undefined reference to `__imp__ZN2sf12RenderStates7DefaultE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:42:(.text+0x375): undefined reference to `__imp__ZN2sf12RenderTarget4drawERKNS_8DrawableERKNS_12RenderStatesE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:45:(.text+0x388): undefined reference to `__imp__ZN2sf6Window7displayEv'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:25:(.text+0x39b): undefined reference to `__imp__ZNK2sf10WindowBase6isOpenEv'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:47:(.text+0x3b3): undefined reference to `__imp__ZN2sf5MusicD1Ev'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:47:(.text+0x3f0): undefined reference to `__imp__ZN2sf7TextureD1Ev'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:47:(.text+0x4b4): undefined reference to `__imp__ZN2sf5MusicD1Ev'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/Demo/main.cpp:47:(.text+0x500): undefined reference to `__imp__ZN2sf7TextureD1Ev'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::RenderTarget::~RenderTarget()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/RenderTarget.hpp:69:(.text$_ZN2sf12RenderTargetD2Ev[_ZN2sf12RenderTargetD2Ev]+0xb): undefined reference to `__imp__ZTVN2sf12RenderTargetE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::RenderWindow::~RenderWindow()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/RenderWindow.hpp:54:(.text$_ZN2sf12RenderWindowD1Ev[_ZN2sf12RenderWindowD1Ev]+0xf): undefined reference to `__imp__ZTVN2sf12RenderWindowE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/sfml/SFML-3.0.0/include/SFML/Graphics/RenderWindow.hpp:54:(.text$_ZN2sf12RenderWindowD1Ev[_ZN2sf12RenderWindowD1Ev]+0x21): undefined reference to `__imp__ZTVN2sf12RenderWindowE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/sfml/SFML-3.0.0/include/SFML/Graphics/RenderWindow.hpp:54:(.text$_ZN2sf12RenderWindowD1Ev[_ZN2sf12RenderWindowD1Ev]+0x4e): undefined reference to `__imp__ZN2sf6WindowD2Ev'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::Drawable::~Drawable()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/Drawable.hpp:50:(.text$_ZN2sf8DrawableD2Ev[_ZN2sf8DrawableD2Ev]+0xb): undefined reference to `__imp__ZTVN2sf8DrawableE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::Transformable::~Transformable()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/Transformable.hpp:56:(.text$_ZN2sf13TransformableD2Ev[_ZN2sf13TransformableD2Ev]+0xb): undefined reference to `__imp__ZTVN2sf13TransformableE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::Transformable::~Transformable()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/Transformable.hpp:56:(.text$_ZN2sf13TransformableD1Ev[_ZN2sf13TransformableD1Ev]+0xb): undefined reference to `__imp__ZTVN2sf13TransformableE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::Sprite::~Sprite()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/Sprite.hpp:50:(.text$_ZN2sf6SpriteD1Ev[_ZN2sf6SpriteD1Ev]+0xf): undefined reference to `__imp__ZTVN2sf6SpriteE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/sfml/SFML-3.0.0/include/SFML/Graphics/Sprite.hpp:50:(.text$_ZN2sf6SpriteD1Ev[_ZN2sf6SpriteD1Ev]+0x21): undefined reference to `__imp__ZTVN2sf6SpriteE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::VertexArray::~VertexArray()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/VertexArray.hpp:51:(.text$_ZN2sf11VertexArrayD1Ev[_ZN2sf11VertexArrayD1Ev]+0xf): undefined reference to `__imp__ZTVN2sf11VertexArrayE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::Text::~Text()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/Text.hpp:56:(.text$_ZN2sf4TextD1Ev[_ZN2sf4TextD1Ev]+0xf): undefined reference to `__imp__ZTVN2sf4TextE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: D:/sfml/SFML-3.0.0/include/SFML/Graphics/Text.hpp:56:(.text$_ZN2sf4TextD1Ev[_ZN2sf4TextD1Ev]+0x21): undefined reference to `__imp__ZTVN2sf4TextE'
+D:/sfml/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/14.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles/Demo.dir/main.cpp.obj: in function `sf::Font::Page::~Page()':
+D:/sfml/SFML-3.0.0/include/SFML/Graphics/Font.hpp:386:(.text$_ZN2sf4Font4PageD1Ev[_ZN2sf4Font4PageD1Ev]+0x2a): undefined reference to `__imp__ZN2sf7TextureD1Ev'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
